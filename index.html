@@ -1,0 +1,3130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <title>Uniuse - Smart Digital Notes</title>
+    <style>
+    /* Root Variables */
+:root {
+    --primary-color: #1a73e8;
+    --secondary-color: #f87;
+    --accent-color: #34a853;
+    --danger-color: #ea4335;
+    --text-primary: #202124;
+    --text-secondary: #5f6368;
+    --border-color: #ffffff;
+    --shadow-color: rgba(0, 0, 0, 0.1);
+    --transition: all 0.3s ease;
+    --mobile-padding: 15px;
+    --tablet-padding: 20px;
+    --desktop-padding: 30px;
+}
+
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    color: var(--text-primary);
+    line-height: 1.6;
+    background-color: var(--secondary-color);
+}
+
+
+/* Authentication Section */
+.auth-section {
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 2rem;
+        background: linear-gradient(135deg, #f5f5f5 0%, #fff 100%);
+
+}
+
+.auth-container {
+        width: 100%;
+        max-width: 400px;
+        background: https://i.ibb.co/VmfbqLw/1-C31-C70-E-42-D0-4813-ADE1-42-D676659-CCA.png;
+        padding: 2rem;
+        border-radius: 80px;
+        box-shadow: 0 2px 10px var(--shadow-color);
+
+}
+
+.logo-section {
+        text-align: center;
+        margin-bottom: 2rem;
+}
+
+.logo {
+        width: 120px;
+        height: auto;
+        margin-bottom: 1rem;
+}
+
+.auth-form {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+}
+
+.form-group {
+        position: relative;
+}
+
+.form-group label {
+        display: block;
+        margin-bottom: 0.5rem;
+        color: var(--text-secondary);
+        font-size: 0.9rem;
+}
+
+.form-group input {
+        width: 100%;
+        padding: 0.8rem;
+        border: 1px solid var(--border-color);
+        border-radius: 4px;
+        font-size: 1rem;
+        transition: var(--transition);
+}
+
+.form-group input:focus {
+        border-color: var(--primary-color);
+        outline: none;
+        box-shadow: 0 0 0 2px rgba(26, 115, 232, 0.2);
+}
+    /* Form Toggle Styling */
+.form-toggle-input:not(:checked) ~ #registerForm {
+        display: none;
+}
+
+.form-toggle-input:checked ~ #loginForm {
+        display: none;
+}
+
+.toggle-link {
+        color: var(--primary-color);
+        cursor: pointer;
+        text-decoration: underline;
+}
+
+.toggle-link:hover {
+        color: #1557b0;
+}
+
+/* Password Toggle Styling */
+.password-field {
+        position: relative;
+        display: flex;
+        align-items: center;
+}
+
+.password-toggle {
+        position: absolute;
+        right: 10px;
+        cursor: pointer;
+        color: var(--text-secondary);
+}
+
+.password-toggle input:checked ~ i {
+        color: var(--primary-color);
+}
+ /* Base Styles */
+:root {
+    --primary-color: #007bff;
+    --secondary-color: #28a745;
+    --background-color: #f8f9fa;
+    --text-color: #212529;
+    --border-color: #ddd;
+    --shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background: var(--background-color);
+}
+
+.hidden {
+    display: none !important;
+}
+
+
+ /* Main Content Area */
+.main-app {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Section Containers */
+section {
+    margin-bottom: 30px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+}
+
+/* Form Controls */
+input, select, textarea {
+    font-family: inherit;
+    font-size: 16px;
+}
+
+/* Button Base Styles */
+button {
+    cursor: pointer;
+    font-family: inherit;
+    border: none;
+    transition: all 0.3s ease;
+}
+
+
+/* Header Styles */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background: #ffffff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+/* Navigation Menu */
+nav {
+    display: flex;
+    gap: 20px;
+    padding: 15px 0;
+    background: #f8f9fa;
+    border-radius: 8px;
+    margin: 20px 0;
+}
+
+nav button {
+    padding: 10px 20px;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+nav button:hover {
+    background: #0056b3;
+}
+
+/* Ad Banners */
+marquee {
+    background: #f8f9fa;
+    border-radius: 8px;
+    margin: 20px 0;
+}
+
+marquee img,
+marquee video {
+    margin: 0 10px;
+    border-radius: 4px;
+}
+
+/* Stats Board */
+.stats-board {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin: 20px 0;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 15px 0;
+}
+
+th, td {
+    padding: 12px;
+    text-align: center;
+    border: 1px solid #ddd;
+}
+
+th {
+    background: #f8f9fa;
+}
+ .create-dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.create-trigger {
+    padding: 12px 24px;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.create-trigger:hover {
+    background: #0056b3;
+    transform: translateY(-2px);
+}
+
+.create-content {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    max-width: 500px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 5px 25px rgba(0,0,0,0.2);
+    z-index: 1000;
+}
+
+.create-content.active {
+    display: block;
+    animation: fadeIn 0.3s ease;
+}
+
+.create-form {
+    padding: 25px;
+}
+
+.create-form h3 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 25px;
+    font-size: 24px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #555;
+    font-weight: 500;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+.color-picker-container {
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.color-picker {
+    width: 100%;
+    height: 40px;
+    padding: 5px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.gradient-toggle {
+    margin: 15px 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.gradient-controls {
+    display: none;
+    margin-top: 15px;
+}
+
+.gradient-controls.active {
+    display: block;
+    animation: slideDown 0.3s ease;
+}
+
+.gradient-controls select {
+    width: 100%;
+    margin-top: 10px;
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 14px;
+    background: #28a745;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.submit-btn:hover {
+    background: #218838;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translate(-50%, -48%);
+    }
+    to {
+        opacity: 1;
+        transform: translate(-50%, -50%);
+    }
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .create-content {
+        width: 95%;
+        max-height: 90vh;
+        overflow-y: auto;
+    }
+
+    .create-form {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .create-form h3 {
+        font-size: 20px;
+    }
+
+    .form-group input,
+    .form-group select,
+    .submit-btn {
+        padding: 10px;
+        font-size: 14px;
+    }
+}
+
+  /* PDF Page Styles */
+        .pdf-page {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: white;
+            z-index: 1000;
+            overflow-y: auto;
+        }
+
+        .pdf-page.active {
+            display: block;
+            animation: slideIn 0.3s ease;
+        }
+
+        .pdf-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background: #f8f9fa;
+            border-bottom: 1px solid #ddd;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+
+        /* Upload Section */
+        .upload-section {
+            margin: 20px;
+            padding: 40px;
+            border: 2px dashed #ddd;
+            border-radius: 12px;
+            text-align: center;
+        }
+
+        .upload-section:hover {
+            border-color: #007bff;
+            background: #f8f9fa;
+        }
+
+        /* PDF List */
+        .pdf-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .pdf-card {
+            background: white;
+            border-radius: 10px;
+            padding: 15px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .pdf-card:hover {
+            transform: translateY(-5px);
+        }
+
+        /* AI Dropdown */
+        .ai-dropdown {
+            position: relative;
+        }
+
+        .ai-trigger {
+            padding: 12px 24px;
+            background: #007bff;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .ai-content {
+            display: none;
+            position: absolute;
+            right: 0;
+            top: 100%;
+            width: 320px;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 5px 25px rgba(0,0,0,0.2);
+            padding: 15px;
+            margin-top: 10px;
+        }
+
+        .ai-content.active {
+            display: block;
+            animation: fadeIn 0.3s ease;
+        }
+
+        .ai-feature {
+            padding: 15px;
+            margin: 8px 0;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .ai-feature:hover {
+            background: #f8f9fa;
+            transform: translateX(5px);
+        }
+
+        .ai-feature i {
+            font-size: 24px;
+            color: #007bff;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #e7f1ff;
+            border-radius: 50%;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .pdf-list {
+                grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            }
+
+            .ai-content {
+                width: 280px;
+                right: -70px;
+            }
+
+            .ai-feature {
+                padding: 12px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .pdf-header {
+                flex-direction: column;
+                gap: 15px;
+                text-align: center;
+            }
+
+            .ai-content {
+                width: 250px;
+                right: -100px;
+            }
+
+            .upload-section {
+                padding: 20px;
+            }
+        }
+
+        /* Animations */
+        @keyframes slideIn {
+            from { transform: translateX(100%); }
+            to { transform: translateX(0); }
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+/* Footer Styles */
+footer {
+    margin-top: 40px;
+    padding: 30px;
+    background: #f8f9fa;
+    border-radius: 8px;
+}
+
+footer details {
+    margin: 15px 0;
+}
+
+footer summary {
+    cursor: pointer;
+    padding: 10px;
+    background: #e9ecef;
+    border-radius: 5px;
+}
+
+footer article {
+    padding: 15px;
+    line-height: 1.6;
+}
+
+footer nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin: 20px 0;
+}
+
+footer nav a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+footer nav a:hover {
+    text-decoration: underline;
+}
+
+/* Profile Details */
+details {
+    position: relative;
+}
+
+details > div {
+    position: absolute;
+    right: 0;
+    top: 100%;
+    width: 250px;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+details img {
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+details select {
+    width: 100%;
+    padding: 8px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+ /* Books Dropdown Container */
+.books-dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.books-trigger {
+    padding: 12px 24px;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.books-trigger:hover {
+    background: #0056b3;
+    transform: translateY(-2px);
+}
+
+.books-content {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #f8f9fa;
+    z-index: 1000;
+    overflow-y: auto;
+}
+
+.books-content.active {
+    display: block;
+    animation: slideIn 0.3s ease;
+}
+
+/* Books Page Header */
+#books-page header {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    background: white;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+#back-to-main {
+    padding: 8px 16px;
+    background: #f8f9fa;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-right: 20px;
+}
+
+.header-title {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.header-title img {
+    width: 32px;
+    height: 32px;
+}
+
+/* Search Section */
+.search-section {
+    padding: 20px;
+    background: white;
+    margin: 20px 0;
+}
+
+.search-section input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 16px;
+}
+
+/* Ad Banner */
+.ad-banner {
+    margin: 20px 0;
+    background: white;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+/* Book Shelf */
+.book-shelf {
+    padding: 20px;
+}
+
+.book-row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.book-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+.book-card {
+    background: var(--user-selected-color, #4a90e2);
+    padding: 20px;
+    border-radius: 10px;
+    color: white;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.book-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+}
+
+.book-details {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+    opacity: 0.9;
+}
+
+/* Book Content Section */
+#book-content {
+    display: none;
+    background: white;
+    min-height: 100vh;
+}
+
+#book-content.active {
+    display: block;
+}
+
+.book-menu {
+    display: flex;
+    gap: 15px;
+    padding: 15px;
+    background: #f8f9fa;
+    border-bottom: 1px solid #ddd;
+}
+
+.book-menu button {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    background: #007bff;
+    color: white;
+    cursor: pointer;
+}
+
+#editor-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 12px 24px;
+    background: #28a745;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+/* Nigerian Notebook Format */
+.nigerian-page {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    background: #fff;
+}
+
+.holes {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px;
+    background: #f8f9fa;
+    border-radius: 8px;
+}
+
+.editor-tool {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: white;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.editor-tool:hover {
+    background: #e9ecef;
+    transform: translateY(-2px);
+}
+
+.editor-tool i {
+    font-size: 18px;
+    color: #495057;
+}
+
+.editor-tool:hover i {
+    color: #007bff;
+}
+
+.writing-area {
+    flex: 1;
+    position: relative;
+    background: white;
+    padding: 20px;
+    border: 1px solid #ddd;
+}
+
+.margin-line {
+    position: absolute;
+    left: 40px;
+    top: 0;
+    bottom: 0;
+    width: 1px;
+    background: #ff0000;
+    opacity: 0.5;
+}
+
+.text-lines {
+    display: flex;
+    flex-direction: column;
+    gap: 10mm;
+}
+
+.line {
+    height: 1px;
+    background: #ddd;
+}
+
+.notebook-text {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+    padding: 20px 40px;
+    line-height: 10mm;
+    background: transparent;
+    resize: none;
+}
+
+/* Animations */
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+ .editor-dropdown {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+#editor-button {
+    padding: 12px 24px;
+    background: #28a745;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    transition: all 0.3s ease;
+}
+
+#editor-button:hover {
+    background: #218838;
+    transform: translateY(-2px);
+}
+
+.editor-tools-dropdown {
+    display: none;
+    position: absolute;
+    bottom: 100%;
+    right: 0;
+    margin-bottom: 10px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 5px 25px rgba(0,0,0,0.2);
+    padding: 15px;
+}
+
+.editor-tools-dropdown.active {
+    display: block;
+    animation: fadeIn 0.3s ease;
+}
+
+.tools-table {
+    border-collapse: separate;
+    border-spacing: 8px;
+}
+
+.tool-cell {
+    width: 45px;
+    height: 45px;
+    background: #f8f9fa;
+    border-radius: 8px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.tool-cell:hover {
+    background: #e9ecef;
+    transform: translateY(-2px);
+}
+
+.tool-cell i {
+    font-size: 18px;
+    color: #495057;
+}
+
+.tool-cell:hover i {
+    color: #007bff;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.feedback-trigger {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 12px 20px;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    transition: all 0.3s ease;
+}
+
+.feedback-trigger:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.feedback-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    z-index: 1000;
+}
+
+.feedback-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 500px;
+}
+
+.rating-container {
+    margin: 20px 0;
+    text-align: center;
+}
+
+.stars {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.stars i {
+    cursor: pointer;
+    color: #ddd;
+    font-size: 24px;
+    transition: color 0.2s ease;
+}
+
+.stars i.active {
+    color: #ffd700;
+}
+
+.feedback-type select {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.feedback-content textarea {
+    width: 100%;
+    height: 150px;
+    padding: 15px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    resize: vertical;
+}
+
+.feedback-content button {
+    padding: 10px 20px;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.feedback-content button[type="submit"] {
+    background: #28a745;
+    color: white;
+}
+
+.close-btn {
+    background: #dc3545;
+    color: white;
+}
+
+@media (max-width: 768px) {
+    .editor-tools-dropdown {
+        right: -50%;
+        transform: translateX(50%);
+    }
+
+    .tool-cell {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .book-row {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+
+    .nigerian-page {
+        flex-direction: column;
+    }
+
+    .holes {
+        flex-direction: row;
+        overflow-x: auto;
+    }
+
+    #editor-button {
+        bottom: 10px;
+        right: 10px;
+        padding: 10px 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .book-menu {
+        flex-wrap: wrap;
+    }
+
+    .book-menu button {
+        flex: 1;
+    }
+
+    .search-section input {
+        font-size: 14px;
+    }
+}
+
+
+
+
+  .writing-area {
+    width: 100%;
+    margin: 20px 0;
+    border-radius: 8px;
+    background: #fff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.writing-area textarea {
+    width: 100%;
+    min-height: 300px;
+    padding: 20px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #333;
+    background: transparent;
+    resize: vertical;
+}
+
+.writing-area textarea:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px #4CAF50;
+}
+
+.writing-area textarea::placeholder {
+    color: #999;
+    font-style: italic;
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header {
+        padding: 10px 15px;
+    }
+
+    nav {
+        flex-wrap: wrap;
+    }
+
+    nav button {
+        flex: 1;
+        min-width: 120px;
+    }
+
+    details > div {
+        width: 200px;
+    }
+
+    marquee {
+        width: 100% !important;
+    }
+    .book-menu {
+        flex-wrap: wrap;
+    }
+
+    .book-menu button {
+        flex: 1;
+    }
+
+    .search-section input {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    main {
+        padding: 10px;
+    }
+
+    footer nav {
+        flex-direction: column;
+    }
+
+    table {
+        font-size: 14px;
+    }
+    .hidden {
+    display: none !important;
+}
+}
+  /* Responsive Breakpoints */
+@media (max-width: 1200px) {
+    .main-app {
+        padding: 15px;
+    }
+}
+
+@media (max-width: 992px) {
+    .book-row {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+}
+
+@media (max-width: 768px) {
+    .nigerian-page {
+        flex-direction: column;
+    }
+
+    .create-content,
+    .books-content {
+        width: 100%;
+        height: 100vh;
+        overflow-y: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .main-app {
+        padding: 10px;
+    }
+
+    header {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+
+/* Extra Small Devices (Phones, 320px and up) */
+@media only screen and (min-width: 320px) {
+    .main-app {
+        padding: var(--mobile-padding);
+    }
+
+    .grid-layout {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .header {
+        padding: 10px;
+    }
+}
+
+/* Small Devices (Large Phones, 480px and up) */
+@media only screen and (min-width: 480px) {
+    .grid-layout {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .card {
+        padding: 15px;
+    }
+}
+
+/* Medium Devices (Tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    .main-app {
+        padding: var(--tablet-padding);
+    }
+
+    .grid-layout {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+    }
+
+    .header {
+        padding: 15px 20px;
+    }
+}
+
+/* Large Devices (Laptops/Desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    .main-app {
+        padding: var(--desktop-padding);
+    }
+
+    .grid-layout {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 25px;
+    }
+}
+
+/* Extra Large Devices (Large Laptops and Desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+    .grid-layout {
+        grid-template-columns: repeat(5, 1fr);
+        gap: 30px;
+    }
+}
+
+/* Device-Specific Optimizations */
+
+/* iPads and Tablets */
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    .pdf-grid {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+}
+
+/* Portrait Phones */
+@media only screen and (max-width: 480px) {
+    .header {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .search-box input {
+        width: 100%;
+    }
+
+    .button-group {
+        flex-direction: column;
+        width: 100%;
+    }
+}
+
+/* Landscape Phones */
+@media only screen and (max-width: 767px) and (orientation: landscape) {
+    .modal-content {
+        max-height: 80vh;
+        overflow-y: auto;
+    }
+}
+
+/* Touch Device Optimizations */
+@media (hover: none) {
+    .button:hover {
+        transform: none;
+    }
+
+    .card:hover {
+        transform: none;
+    }
+}
+
+/* High-DPI Screen Optimizations */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .image {
+        background-size: contain;
+    }
+}
+
+/* Print Media */
+@media print {
+    .no-print {
+        display: none;
+    }
+
+    .page-break {
+        page-break-before: always;
+    }
+}
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation: none !important;
+        transition: none !important;
+    }
+}
+
+/* Dark Mode Support */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --background-color: #121212;
+        --text-color: #ffffff;
+    }
+}
+
+/* Foldable Device Support */
+@media (spanning: single-fold-vertical) {
+    .content {
+        flex-direction: row;
+    }
+}
+
+/* CSS Grid Fallbacks */
+@supports not (display: grid) {
+    .grid-layout {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .grid-item {
+        flex: 1 1 300px;
+        margin: 10px;
+    }
+}
+
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+</head>
+<body>
+
+   <section id="authSection" class="auth-section">
+    <div class="auth-container">
+        <div class="logo-section">
+           <img src="https://i.ibb.co/VmfbqLw/1-C31-C70-E-42-D0-4813-ADE1-42-D676659-CCA.png" alt="Uniuse Logo" class="logo">
+
+         <h1> Uniuse</h1>
+            </div>
+
+        <!-- Toggle Control -->
+        <input type="checkbox" id="formToggle" class="form-toggle-input" hidden>
+
+        <!-- Login Form -->
+        <form id="loginForm" class="auth-form">
+            <h2>Login</h2>
+            <div class="form-group">
+                <label for="loginEmail">Email Address</label>
+                <input type="email" id="loginEmail" required>
+            </div>
+            <div class="form-group">
+                <label for="loginPassword">Password</label>
+                <div class="password-field">
+                    <input type="password" id="loginPassword" required>
+                    <label class="password-toggle" for="showLoginPassword">
+                        <input type="checkbox" id="showLoginPassword" hidden>
+                        <i class="fas fa-eye"></i>
+                    </label>
+                </div>
+            </div>
+            <button type="submit" class="btn-primary">Login</button>
+            <div class="auth-links">
+                <a href="#" class="forgot-link">Forgot Password?</a>
+                <label for="formToggle" class="toggle-link">New User? Create Account</label>
+            </div>
+        </form>
+
+        <!-- Registration Form -->
+        <form id="registerForm" class="auth-form">
+            <h2>Sign Up</h2>
+            <div class="form-group">
+                <label for="registerName">Full Name</label>
+                <input type="text" id="registerName" required>
+            </div>
+            <div class="form-group">
+                <label for="registerEmail">Email Address</label>
+                <input type="email" id="registerEmail" required>
+            </div>
+            <div class="form-group">
+                <label for="registerPassword">Password</label>
+                <div class="password-field">
+                    <input type="password" id="registerPassword" required>
+                    <label class="password-toggle" for="showRegisterPassword">
+                        <input type="checkbox" id="showRegisterPassword" hidden>
+                        <i class="fas fa-eye"></i>
+                    </label>
+                </div>
+            </div>
+            <button type="submit" class="btn-primary">Create Account</button>
+            <div class="auth-links">
+                <label for="formToggle" class="toggle-link">Already have an account? Login</label>
+            </div>
+        </form>
+    </div>
+</section>
+
+
+
+    <!-- Main Application Section -->
+    <section id="mainApp" class="main-app hidden">
+          <!-- Header -->
+        <header>
+            <img src="uniuse-logo.png" alt="Uniuse Logo" width="150" height="50">
+
+            <!-- Profile Trigger -->
+            <details>
+                <summary>Profile</summary>
+                <div>
+                    <img src="default-avatar.png" alt="Profile Picture" width="100" height="100">
+                    <h3>User Name</h3>
+                    <p>user@email.com</p>
+                    <select>
+                        <option value="😊">😊</option>
+                        <option value="😎">😎</option>
+                        <option value="🤓">🤓</option>
+                        <option value="😇">😇</option>
+                    </select>
+                    <button>Close</button>
+                </div>
+            </details>
+        </header>
+
+        <!-- Menu Bar -->
+        <nav>
+            <div class="create-dropdown">
+                <button class="create-trigger">Create</button>
+                <div class="create-content" id="createContent">
+                    <div class="create-form">
+                        <form id="notebook-form">
+                            <h3>Create New Notebook</h3>
+                            <!-- Basic Information -->
+                            <div class="form-group">
+                                <label for="notebook-name">Notebook Name:</label>
+                                <input type="text" id="notebook-name" name="notebook-name" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="page-count">Number of Pages:</label>
+                                <input type="number" id="page-count" name="page-count" min="1" max="500" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="notebook-type">Notebook Type:</label>
+                                <select id="notebook-type" name="notebook-type" required>
+                                    <option value="">Select Type</option>
+                                    <option value="pdf">PDF Format</option>
+                                    <option value="nigerian">Nigerian Notebook</option>
+                                </select>
+                            </div>
+
+                            <!-- Color Picker Section -->
+                            <div class="color-picker-container">
+                                <div class="form-group">
+                                    <label for="cover-color">Cover Color:</label>
+                                    <input type="color" id="cover-color" name="cover-color" value="#000000" class="color-picker">
+                                </div>
+
+                                <div class="gradient-toggle">
+                                    <input type="checkbox" id="use-gradient" name="use-gradient">
+                                    <label for="use-gradient">Use Gradient</label>
+                                </div>
+
+                                <div class="gradient-controls" id="gradient-controls">
+                                    <div class="form-group">
+                                        <input type="color" id="gradient-color-2" name="gradient-color-2" value="#ffffff" class="color-picker">
+                                    </div>
+                                    <div class="form-group">
+                                        <select id="gradient-direction" name="gradient-direction">
+                                            <option value="to right">Horizontal</option>
+                                            <option value="to bottom">Vertical</option>
+                                            <option value="to bottom right">Diagonal</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <button type="submit" class="submit-btn">Create Notebook</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="books-dropdown">
+    <button class="books-trigger">Books</button>
+    <div class="books-content" id="booksContent">
+        <section id="books-page">
+            <!-- Header -->
+            <header>
+                <button id="back-to-main">← Back</button>
+                <div class="header-title">
+                    <img src="books-icon.png" alt="Books Icon">
+                    <h1>Books</h1>
+                </div>
+            </header>
+
+            <!-- Search Bar -->
+            <div class="search-section">
+                <input type="search" placeholder="Search books by name...">
+            </div>
+
+            <!-- Ad Banner -->
+            <div class="ad-banner">
+                <marquee width="480" height="60">
+                    <img src="ad1.jpg" alt="Advertisement" width="480" height="60">
+                    <img src="ad2.jpg" alt="Advertisement" width="480" height="60">
+                </marquee>
+            </div>
+
+            <!-- Book Shelf Container -->
+            <div class="book-shelf">
+                <!-- First Row -->
+                <div class="book-row">
+                    
+                </div>
+
+                <!-- Second Row -->
+                <div class="book-row">
+                    <!-- Additional book cards can be added here -->
+                </div>
+                <div class="book-row">
+                    
+                </div><div class="book-row">
+                    
+                </div><div class="book-row">
+                    
+                </div><div class="book-row">
+                    
+                </div><div class="book-row">
+                    
+                </div><div class="book-row">
+                    
+                </div><div class="book-row">
+                    
+                </div><div class="book-row">
+                    
+                </div><div class="book-row">
+                    
+                </div><div class="book-row">
+                    
+                </div><div class="book-row">
+                    
+                </div><div class="book-row">
+                    
+                </div><div class="book-row">
+                    
+                </div><div class="book-row">
+                    
+                </div><div class="book-row">
+                    
+                </div><div class="book-row">
+                    
+                </div><div class="book-row">
+                    
+                </div><div class="book-row">
+                    
+                </div><div class="book-row">
+                    
+                </div><div class="book-row">
+                    
+                </div><div class="book-row">
+                    
+                </div><div class="book-row">
+                    
+                </div><div class="book-row">
+                    
+                </div><div class="book-row">
+                    
+                </div><div class="book-row">
+                    
+                </div><div class="book-row">
+                    
+                </div><div class="book-row">
+                    
+                </div><div class="book-row">
+                    
+                </div><div class="book-row">
+                    
+                </div><div class="book-row">
+                    
+                </div><div class="book-row">
+                    
+                </div><div class="book-row">
+                    
+                </div><div class="book-row">
+                    
+                </div><div class="book-row">
+                    
+                </div><div class="book-row">
+                    
+                </div><div class="book-row">
+                    
+                </div><div class="book-row">
+                    
+                </div><div class="book-row">
+                    
+                </div><div class="book-row">
+                    
+                </div><div class="book-row">
+                    
+                </div><div class="book-row">
+                    
+                </div><div class="book-row">
+                    
+                </div><div class="book-row">
+                    
+                </div><div class="book-row">
+                    
+                </div><div class="book-row">
+                    
+                </div><div class="book-row">
+                    
+                </div><div class="book-row">
+                    
+                </div><div class="book-row">
+                    
+                </div><div class="book-row">
+                    
+                </div><div class="book-row">
+                    
+                </div><div class="book-row">
+                    
+                </div><div class="book-row">
+                    
+                </div><div class="book-row">
+                    
+                </div><div class="book-row">
+                    
+                </div><div class="book-row">
+                    
+                </div><div class="book-row">
+                    
+                </div><div class="book-row">
+                    
+                </div><div class="book-row">
+                    
+                </div><div class="book-row">
+                    
+                </div><div class="book-row">
+                    
+                </div><div class="book-row">
+                    
+                </div><div class="book-row">
+                    
+                </div><div class="book-row">
+                    
+                </div><div class="book-row">
+                    
+                </div><div class="book-row">
+                    
+                </div><div class="book-row">
+                    
+                </div><div class="book-row">
+                    
+                </div><div class="book-row">
+                    
+                </div><div class="book-row">
+                    
+                </div><div class="book-row">
+                    
+                </div><div class="book-row">
+                    
+                </div><div class="book-row">
+                    
+                </div><div class="book-row">
+                    
+                </div><div class="book-row">
+                    
+                </div><div class="book-row">
+                    
+                </div><div class="book-row">
+                    
+                </div><div class="book-row">
+                    
+                </div><div class="book-row">
+                    
+                </div><div class="book-row">
+                    
+                </div><div class="book-row">
+                    
+                </div><div class="book-row">
+                    
+                </div><div class="book-row">
+                    
+                </div><div class="book-row">
+                    
+                </div><div class="book-row">
+                    
+                </div><div class="book-row">
+                    
+                </div><div class="book-row">
+                    
+                </div><div class="book-row">
+                    
+                </div><div class="book-row">
+                    
+                </div><div class="book-row">
+                    
+                </div><div class="book-row">
+                    
+                </div><div class="book-row">
+                    
+                </div><div class="book-row">
+                    
+                </div><div class="book-row">
+                    
+                </div><div class="book-row">
+                    
+                </div><div class="book-row">
+                    
+                </div><div class="book-row">
+                    
+                </div><div class="book-row">
+                    
+                </div><div class="book-row">
+                    
+                </div><div class="book-row">
+                    
+                </div><div class="book-row">
+                    
+                </div><div class="book-row">
+                    
+                </div><div class="book-row">
+                    
+                </div><div class="book-row">
+                    
+                </div><div class="book-row">
+                    
+                </div><div class="book-row">
+                    
+                </div><div class="book-row">
+                    
+                </div><div class="book-row">
+                    
+                </div><div class="book-row">
+                    
+                </div><div class="book-row">
+                    
+                </div><div class="book-row">
+                    
+                </div><div class="book-row">
+                    
+                </div><div class="book-row">
+                    
+                </div><div class="book-row">
+                    
+                </div><div class="book-row">
+                    
+                </div><div class="book-row">
+                    
+                </div><div class="book-row">
+                    
+                </div><div class="book-row">
+                    
+                </div><div class="book-row">
+                    
+                </div><div class="book-row">
+                    
+                </div><div class="book-row">
+                    
+                </div><div class="book-row">
+                    
+                </div><div class="book-row">
+                    
+                </div><div class="book-row">
+                    
+                </div><div class="book-row">
+                    
+                </div><div class="book-row">
+                    
+                </div><div class="book-row">
+                    
+                </div><div class="book-row">
+                    
+                </div><div class="book-row">
+                    
+                </div><div class="book-row">
+                    
+                </div><div class="book-row">
+                    
+                </div><div class="book-row">
+                    
+                </div><div class="book-row">
+                    
+                </div><div class="book-row">
+                    
+                </div><div class="book-row">
+                    
+                </div><div class="book-row">
+                    
+                </div>
+            </div>
+        </section>
+
+        <!-- Individual Book View Page -->
+        <section id="book-content">
+            <!-- Book Header -->
+            <header>
+                <button id="back-to-books">← Back to Books</button>
+                <h1>Book Name</h1>
+            </header>
+
+            <!-- Book Menu Bar -->
+            <nav class="book-menu">
+                
+                <label>
+                    Autosave
+                    <input type="checkbox">
+                </label>
+            </nav>
+
+            <!-- Floating Editor Button -->
+            <div class="editor-dropdown">
+    <button id="editor-button" draggable="true">
+        <i class="fas fa-edit"></i> Editor
+    </button>
+    
+    <div class="editor-tools-dropdown" id="editorTools">
+        <table class="tools-table">
+            <tr>
+                <td class="tool-cell" title="Font Size">
+                    <i class="fas fa-text-height"></i>
+                </td>
+                <td class="tool-cell" title="Bold">
+                    <i class="fas fa-bold"></i>
+                </td>
+                <td class="tool-cell" title="Underline">
+                    <i class="fas fa-underline"></i>
+                </td>
+                <td class="tool-cell" title="Text Style">
+                    <i class="fas fa-font"></i>
+                </td>
+            </tr>
+            <tr>
+                <td class="tool-cell" title="Add Table">
+                    <i class="fas fa-table"></i>
+                </td>
+                <td class="tool-cell" title="Undo">
+                    <i class="fas fa-undo"></i>
+                </td>
+                <td class="tool-cell" title="Redo">
+                    <i class="fas fa-redo"></i>
+                </td>
+                <td class="tool-cell" title="Add Image">
+                    <i class="fas fa-image"></i>
+                </td>
+            </tr>
+            <tr>
+                <td class="tool-cell" title="List">
+                    <i class="fas fa-list"></i>
+                </td>
+                <td class="tool-cell" title="Link">
+                    <i class="fas fa-link"></i>
+                </td>
+                <td class="tool-cell" title="Code">
+                    <i class="fas fa-code"></i>
+                </td>
+                <td class="tool-cell" title="Settings">
+                    <i class="fas fa-cog"></i>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+
+            <!-- PDF Format Content -->
+
+            <div id="pdf-format">
+                <input type="text" placeholder="Page Topic">
+                <nav class="page-navigation">
+                    <button>← Previous</button>
+                    <span>Page 1 of 100</span>
+                    <button>Next →</button>
+                </nav>
+                <div class="writing-area">
+                <textarea placeholder="Enter your text here..."></textarea>
+            </div>
+            </div>
+
+
+            <!-- Nigerian Notebook Format -->
+
+            <div id="nigerian-format">
+                <input type="text" placeholder="Page Topic">
+                <nav class="page-navigation">
+                    <button>← Previous</button>
+                    <span>Page 1 of 100</span>
+                    <button>Next →</button>
+                </nav>
+                <div class="nigerian-page">
+                    <!-- Left side holes with editor tools -->
+                   <div class="holes">
+    <div class="editor-tool" title="Font Size">
+        <i class="fas fa-text-height"></i>
+    </div>
+    <div class="editor-tool" title="Bold">
+        <i class="fas fa-bold"></i>
+    </div>
+    <div class="editor-tool" title="Underline">
+        <i class="fas fa-underline"></i>
+    </div>
+    <div class="editor-tool" title="Text Style">
+        <i class="fas fa-font"></i>
+    </div>
+    <div class="editor-tool" title="Add Table">
+        <i class="fas fa-table"></i>
+    </div>
+    <div class="editor-tool" title="Undo">
+        <i class="fas fa-undo"></i>
+    </div>
+    <div class="editor-tool" title="Redo">
+        <i class="fas fa-redo"></i>
+    </div>
+    <div class="editor-tool" title="Add Image">
+        <i class="fas fa-image"></i>
+    </div>
+    <div class="editor-tool" title="List">
+        <i class="fas fa-list"></i>
+    </div>
+    <div class="editor-tool" title="Link">
+        <i class="fas fa-link"></i>
+    </div>
+    <div class="editor-tool" title="Code">
+        <i class="fas fa-code"></i>
+    </div>
+    <div class="editor-tool" title="Settings">
+        <i class="fas fa-cog"></i>
+    </div>
+</div>
+
+
+                    <!-- Main writing area -->
+                    <div class="writing-area">
+                        <div class="margin-line"></div>
+                        <div class="text-lines">
+                            <div class="line"></div>
+                            <div class="line"></div>
+                            <div class="line"></div>
+                            <div class="line"></div><div class="line"></div>
+                            <div class="line"></div><div class="line"></div>
+                            <div class="line"></div><div class="line"></div>
+                            <div class="line"></div><div class="line"></div>
+                            <div class="line"></div><div class="line"></div>
+                            <div class="line"></div><div class="line"></div>
+                            <div class="line"></div><div class="line"></div>
+                            <div class="line"></div><div class="line"></div>
+                            <div class="line"></div><div class="line"></div>
+                            <div class="line"></div><div class="line"></div>
+                            <div class="line"></div><div class="line"></div>
+                            <div class="line"></div><div class="line"></div>
+                            <div class="line"></div><div class="line"></div>
+                            <div class="line"></div><div class="line"></div>
+                            <div class="line"></div><div class="line"></div>
+                            <div class="line"></div><div class="line"></div>
+                            <div class="line"></div><div class="line"></div>
+                            <div class="line"></div><div class="line"></div>
+                            <div class="line"></div>
+                            <!-- Repeat for all 24 lines -->
+                        </div>
+                        <textarea class="notebook-text" rows="24"></textarea>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</div>
+
+
+            
+          <!-- Add this to your HTML where you want the feedback button to appear -->
+<button id="feedbackBtn" class="feedback-trigger">
+    <i class="fas fa-comments"></i> Feedback
+</button>
+
+<!-- Feedback Modal -->
+<div id="feedbackModal" class="feedback-modal">
+    <div class="feedback-content">
+        <h2>Share Your Feedback</h2>
+        <form id="feedbackForm">
+            <div class="rating-container">
+                <span>Rate your experience:</span>
+                <div class="stars">
+                    <i class="fas fa-star" data-rating="1"></i>
+                    <i class="fas fa-star" data-rating="2"></i>
+                    <i class="fas fa-star" data-rating="3"></i>
+                    <i class="fas fa-star" data-rating="4"></i>
+                    <i class="fas fa-star" data-rating="5"></i>
+                </div>
+            </div>
+            <div class="feedback-type">
+                <select required>
+                    <option value="">Select Feedback Type</option>
+                    <option value="bug"Problem  Report</option>
+                    <option value="feature">Feature Request</option>
+                    <option value="improvement">Improvement Suggestion</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+            <textarea placeholder="Tell us your thoughts..." required></textarea>
+            <button type="submit">Submit Feedback</button>
+            <button type="button" class="close-btn">Close</button>
+        </form>
+    </div>
+</div>
+
+
+        <!-- Main Ad Banner -->
+        <section>
+            <marquee scrolldelay="15000" width="500" height="70">
+                <img src="ad1.jpg" alt="Advertisement 1" width="500" height="70">
+                <img src="ad2.jpg" alt="Advertisement 2" width="500" height="70">
+                <img src="ad3.jpg" alt="Advertisement 3" width="500" height="70">
+                <video width="500" height="70" autoplay muted>
+                    <source src="ad-video1.mp4" type="video/mp4">
+                </video>
+                <img src="ad4.jpg" alt="Advertisement 4" width="500" height="70">
+                <img src="ad5.jpg" alt="Advertisement 5" width="500" height="70">
+                <img src="ad6.jpg" alt="Advertisement 6" width="500" height="70">
+                <video width="500" height="70" autoplay muted>
+                    <source src="ad-video2.mp4" type="video/mp4">
+                </video>
+            </marquee>
+        </section>
+
+        <!-- Stats Board -->
+        <section>
+            <article>
+                <h2>App Statistics</h2>
+                <table border="1">
+                    <tr>
+                        <th>Books Created</th>
+                        <th>Total Users</th>
+                        <th>Feedback Count</th>
+                    </tr>
+                    <tr>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                    </tr>
+                </table>
+            </article>
+        </section>
+
+        <!-- Small Ad Banner -->
+        <section>
+            <marquee width="250" height="40">
+                <img src="small-ad1.jpg" alt="Small Advertisement" width="250" height="40">
+                <img src="small-ad2.jpg" alt="Small Advertisement" width="250" height="40">
+            </marquee>
+        </section>
+
+        <!-- Footer -->
+        <footer>
+            <!-- Partners Section -->
+            <section>
+                <h3>Our Partners</h3>
+                <marquee>
+                    <img src="partner1-logo.png" alt="Partner 1" width="100" height="50">
+                    <span>Partner 1 Name</span>
+                    <img src="partner2-logo.png" alt="Partner 2" width="100" height="50">
+                    <span>Partner 2 Name</span>
+                    <img src="partner3-logo.png" alt="Partner 3" width="100" height="50">
+                    <span>Partner 3 Name</span>
+                </marquee>
+            </section>
+
+            <!-- About Sections -->
+            <details>
+                <summary>About Us</summary>
+                <article>
+                    <h3>About Us</h3>
+                    <p>Welcome to Uniuse, a revolutionary app designed to bridge the gap between traditional note-taking and modern digital convenience. At Uniuse, we transform your handwritten or printed Nigerian-style notebook pages into organized, editable, and shareable digital notes with the power of AI and advanced text recognition.</p>
+                    <p>Our mission is to enhance productivity by offering a seamless way to digitize, edit, and manage your notes while preserving the unique structure of Nigerian notebooks. Whether you're a student, professional, or creative, Uniuse empowers you to create, organize, and access your notes anywhere, anytime.</p>
+                    <p>With features like real-time auto-save, intelligent text correction, and AI assistance, Uniuse is redefining how notes are captured, stored, and shared. Join us in creating a smarter, more efficient way to handle your ideas and information.</p>
+                </article>
+            </details>
+
+            <details>
+                <summary>About the CEO</summary>
+                <article>
+                    <h3>About the CEO</h3>
+                    <p>Bashorun Idris is a visionary entrepreneur and a dedicated student at Lagos State University. As the founder and CEO of iSmart Digital Connect, a company registered with the Corporate Affairs Commission (CAC) in Nigeria, he is committed to driving innovation in the fintech, e-commerce, and digital solutions sectors.</p>
+                    <p>With a passion for creating impactful and accessible technologies, Bashorun Idris leads projects like the Uniuse App, Bills and Mall, Hussview and Tap to Pay(which is under development), which aim to revolutionize how people interact with financial and digital platforms. His forward-thinking approach and commitment to excellence continue to shape the future of tech innovation in Nigeria and beyond.</p>
+                </article>
+            </details>
+
+            <details>
+                <summary>About the Company</summary>
+                <article>
+                    <h3>About the Company</h3>
+                    <p>iSmart Digital Connect is a Nigerian-based technology company dedicated to transforming lives through innovative fintech, e-commerce, and digital solutions. Founded and registered with the Corporate Affairs Commission (CAC), the company focuses on creating accessible, user-friendly platforms tailored to meet the unique needs of Nigerians and beyond.</p>
+                    <p>With flagship projects like Tap to Pay and the Uniuse App, iSmart Digital Connect combines cutting-edge technology with a deep understanding of local challenges to deliver practical and impactful solutions. The company is committed to fostering growth, innovation, and convenience in every product and service it offers.</p>
+                </article>
+            </details>
+
+            <!-- Social Links -->
+            <nav>
+                <h4>Follow Us</h4>
+                <a href="#">Facebook</a>
+                <a href="#">Twitter</a>
+                <a href="#">Instagram</a>
+                <a href="#">LinkedIn</a>
+            </nav>
+
+            <p>&copy; 2025 Uniuse - All rights reserved</p>
+        </footer>
+         </section>
+      <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-storage-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore-compat.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.11.338/pdf.min.js"></script>
+
+    <script>
+    // Initialize Firebase with your config
+const firebaseConfig = {
+    apiKey: "AIzaSyAK8T_ceUGR1B0ovxFLxPYs6HWQYewittw",
+    authDomain: "uniuse.firebaseapp.com",
+    projectId: "uniuse",
+    storageBucket: "uniuse.firebasestorage.app",
+    messagingSenderId: "132594569463",
+    appId: "1:132594569463:web:93b3ab72b2a84e29c7c3f2",
+    measurementId: "G-7ZCGXZ829S"
+};
+
+firebase.initializeApp(firebaseConfig);
+const auth = firebase.auth();
+const db = firebase.firestore();
+
+// DOM Elements
+const loginForm = document.getElementById('loginForm');
+const registerForm = document.getElementById('registerForm');
+const authSection = document.getElementById('authSection');
+const mainApp = document.getElementById('mainApp');
+
+// Password Toggle Functionality
+document.querySelectorAll('.password-toggle input[type="checkbox"]').forEach(toggle => {
+    toggle.addEventListener('change', function() {
+        const passwordField = this.closest('.password-field').querySelector('input[type="password"]');
+        passwordField.type = this.checked ? 'text' : 'password';
+    });
+});
+
+// Registration Handler
+registerForm.addEventListener('submit', async (e) => {
+    e.preventDefault();
+
+    try {
+        const name = document.getElementById('registerName').value;
+        const email = document.getElementById('registerEmail').value;
+        const password = document.getElementById('registerPassword').value;
+
+        const userCredential = await auth.createUserWithEmailAndPassword(email, password);
+
+        // Save additional user data
+        await db.collection('users').doc(userCredential.user.uid).set({
+            name: name,
+            email: email,
+            createdAt: firebase.firestore.FieldValue.serverTimestamp()
+        });
+
+        showMainApp();
+    } catch (error) {
+        alert(`Registration error: ${error.message}`);
+    }
+});
+
+// Login Handler
+loginForm.addEventListener('submit', async (e) => {
+    e.preventDefault();
+
+    try {
+        const email = document.getElementById('loginEmail').value;
+        const password = document.getElementById('loginPassword').value;
+
+        await auth.signInWithEmailAndPassword(email, password);
+        showMainApp();
+    } catch (error) {
+        alert(`Login error: ${error.message}`);
+    }
+});
+
+// Auth State Observer
+auth.onAuthStateChanged(user => {
+    if (user) {
+        showMainApp();
+        loadUserData(user);
+    } else {
+        showAuth();
+    }
+});
+
+// Forgot Password Handler
+document.querySelector('.forgot-link').addEventListener('click', async (e) => {
+    e.preventDefault();
+    const email = prompt('Enter your email address:');
+
+    if (email) {
+        try {
+            await auth.sendPasswordResetEmail(email);
+            alert('Password reset email sent! Check your inbox.');
+        } catch (error) {
+            alert(`Error: ${error.message}`);
+        }
+    }
+});
+
+// Helper Functions
+function showMainApp() {
+    authSection.classList.add('hidden');
+    mainApp.classList.remove('hidden');
+}
+
+function showAuth() {
+    authSection.classList.remove('hidden');
+    mainApp.classList.add('hidden');
+}
+
+async function loadUserData(user) {
+    try {
+        const doc = await db.collection('users').doc(user.uid).get();
+        const userData = doc.data();
+
+        // Update UI with user data
+        const userName = document.querySelector('.main-app h3');
+        const userEmail = document.querySelector('.main-app p');
+
+        if (userName) userName.textContent = userData.name;
+        if (userEmail) userEmail.textContent = userData.email;
+    } catch (error) {
+        console.error('Error loading user data:', error);
+    }
+}
+
+// Logout Handler
+window.logout = function() {
+    auth.signOut().then(() => {
+        showAuth();
+    }).catch(error => {
+        alert(`Logout error: ${error.message}`);
+    });
+};
+
+ 
+            
+            
+            
+            
+// Navigation Controls
+document.addEventListener('DOMContentLoaded', () => {
+    const profileButton = document.querySelector('details');
+    const createButton = document.querySelector('.create-trigger');
+    const booksButton = document.querySelector('.books-trigger');
+
+    // Profile Button
+    profileButton.addEventListener('toggle', () => {
+        if (profileButton.open) {
+            loadProfile(auth.currentUser);
+        }
+    });
+
+    // Create Button
+    createButton.addEventListener('click', () => {
+        const createContent = document.getElementById('createContent');
+        createContent.style.display = createContent.style.display === 'block' ? 'none' : 'block';
+    });
+
+    // Books Button
+    booksButton.addEventListener('click', () => {
+        const booksContent = document.getElementById('booksContent');
+        booksContent.style.display = booksContent.style.display === 'block' ? 'none' : 'block';
+        if (booksContent.style.display === 'block') {
+            loadNotebooks();
+        }
+    });
+});
+
+ // Firebase Auth State Observer
+auth.onAuthStateChanged(user => {
+    if (user) {
+        loadProfile(user);
+        loadNotebooks();
+        initializeUI();
+    }
+});
+
+// Profile Management
+const profileDetails = document.querySelector('details');
+const profileImage = profileDetails.querySelector('img');
+const profileName = profileDetails.querySelector('h3');
+const profileEmail = profileDetails.querySelector('p');
+const emojiSelect = profileDetails.querySelector('select');
+const closeButton = profileDetails.querySelector('button');
+
+// File Input Setup
+const fileInput = document.createElement('input');
+fileInput.type = 'file';
+fileInput.accept = 'image/*';
+fileInput.style.display = 'none';
+profileImage.parentElement.insertBefore(fileInput, profileImage.nextSibling);
+
+// Profile Picture Upload
+profileImage.style.cursor = 'pointer';
+profileImage.addEventListener('click', () => fileInput.click());
+
+fileInput.addEventListener('change', async (e) => {
+    const file = e.target.files[0];
+    if (file) {
+        const storageRef = firebase.storage().ref();
+        const fileRef = storageRef.child(`profilePictures/${auth.currentUser.uid}`);
+
+        try {
+            await fileInput.put(file);
+            const url = await fileRef.getDownloadURL();
+            await auth.currentUser.updateProfile({ photoURL: url });
+            await db.collection('users').doc(auth.currentUser.uid).update({
+                photoURL: url
+            });
+            profileImage.src = url;
+            showNotification('Profile picture updated successfully!');
+        } catch (error) {
+            showNotification('Error uploading image: ' + error.message, 'error');
+        }
+    }
+});
+
+// Emoji Selection
+emojiSelect.addEventListener('change', async () => {
+    try {
+        await db.collection('users').doc(auth.currentUser.uid).update({
+            emoji: emojiSelect.value
+        });
+        showNotification('Emoji updated successfully!');
+    } catch (error) {
+        showNotification('Error updating emoji: ' + error.message, 'error');
+    }
+});
+
+// Profile Loading
+async function loadProfile(user) {
+    const userDoc = await db.collection('users').doc(user.uid).get();
+    const userData = userDoc.data();
+
+    profileName.textContent = userData.name;
+    profileEmail.textContent = userData.email;
+
+    if (userData.photoURL) {
+        profileImage.src = userData.photoURL;
+    }
+
+    if (userData.emoji) {
+        emojiSelect.value = userData.emoji;
+    }
+}
+
+// Notebook Creation
+const notebookForm = document.getElementById('notebook-form');
+const useGradientCheckbox = document.getElementById('use-gradient');
+const gradientControls = document.getElementById('gradient-controls');
+const bookshelf = document.querySelector('.book-shelf');
+
+useGradientCheckbox.addEventListener('change', () => {
+    gradientControls.style.display = useGradientCheckbox.checked ? 'block' : 'none';
+});
+
+notebookForm.addEventListener('submit', async (e) => {
+    e.preventDefault();
+
+    const notebookData = {
+        name: document.getElementById('notebook-name').value,
+        pageCount: parseInt(document.getElementById('page-count').value),
+        type: document.getElementById('notebook-type').value,
+        coverColor: document.getElementById('cover-color').value,
+        useGradient: useGradientCheckbox.checked,
+        gradientColor2: document.getElementById('gradient-color-2').value,
+        gradientDirection: document.getElementById('gradient-direction').value,
+        userId: auth.currentUser.uid,
+        createdAt: firebase.firestore.FieldValue.serverTimestamp()
+    };
+
+    try {
+        const docRef = await db.collection('notebooks').add(notebookData);
+        createBookCard(notebookData, docRef.id);
+        notebookForm.reset();
+        document.getElementById('createContent').style.display = 'none';
+        showNotification('Notebook created successfully!');
+    } catch (error) {
+        showNotification('Error creating notebook: ' + error.message, 'error');
+    }
+});
+
+// Book Management
+const searchInput = document.querySelector('.search-section input');
+const backToMainBtn = document.getElementById('back-to-main');
+const booksPage = document.getElementById('books-page');
+const bookContent = document.getElementById('book-content');
+
+async function loadNotebooks() {
+    const notebooksSnapshot = await db.collection('notebooks')
+        .where('userId', '==', auth.currentUser.uid)
+        .orderBy('createdAt', 'desc')
+        .get();
+
+    bookshelf.querySelector('.book-row').innerHTML = '';
+    notebooksSnapshot.forEach(doc => {
+        createBookCard(doc.data(), doc.id);
+    });
+}
+
+// Search Functionality
+searchInput.addEventListener('input', async (e) => {
+    const searchTerm = e.target.value.toLowerCase();
+    const notebooksSnapshot = await db.collection('notebooks')
+        .where('userId', '==', auth.currentUser.uid)
+        .get();
+
+    bookshelf.querySelector('.book-row').innerHTML = '';
+    notebooksSnapshot.forEach(doc => {
+        const data = doc.data();
+        if (data.name.toLowerCase().includes(searchTerm)) {
+            createBookCard(data, doc.id);
+        }
+    });
+});
+
+// Navigation Handlers
+backToMainBtn.addEventListener('click', () => {
+    booksPage.style.display = 'block';
+    bookContent.style.display = 'none';
+});
+
+document.getElementById('back-to-books').addEventListener('click', () => {
+    bookContent.style.display = 'none';
+    booksPage.style.display = 'block';
+});
+
+// Book Card Creation and Click Handler
+function createBookCard(notebook, id) {
+    const bookCard = document.createElement('a');
+    bookCard.href = '#book-content';
+    bookCard.className = 'book-link';
+    bookCard.dataset.notebookId = id;
+
+    const background = notebook.useGradient
+        ? `linear-gradient(${notebook.gradientDirection}, ${notebook.coverColor}, ${notebook.gradientColor2})`
+        : notebook.coverColor;
+
+    bookCard.innerHTML = `
+        <div class="book-card" style="background: ${background}">
+            <h4>${notebook.name}</h4>
+            <div class="book-details">
+                <small>${notebook.pageCount} Pages</small>
+                <small>${notebook.type}</small>
+            </div>
+        </div>
+    `;
+
+    const firstRow = bookshelf.querySelector('.book-row');
+    firstRow.appendChild(bookCard);
+}// Book Card Click Handler
+document.addEventListener('click', async (e) => {
+    const bookCard = e.target.closest('.book-link');
+    if (!bookCard) return;
+
+    const notebookId = bookCard.dataset.notebookId;
+    const doc = await db.collection('notebooks').doc(notebookId).get();
+    const notebookData = { id: notebookId, ...doc.data() };
+
+    // Show book content section
+    document.getElementById('books-page').style.display = 'none';
+    const bookContent = document.getElementById('book-content');
+    bookContent.style.display = 'block';
+
+    // Update book header
+    bookContent.querySelector('h1').textContent = notebookData.name;
+
+    // Initialize appropriate format
+    if (notebookData.type === 'pdf') {
+        document.getElementById('pdf-format').style.display = 'block';
+        document.getElementById('nigerian-format').style.display = 'none';
+        initializeFormat(notebookData, 'pdf');
+    } else {
+        document.getElementById('pdf-format').style.display = 'none';
+        document.getElementById('nigerian-format').style.display = 'block';
+        initializeFormat(notebookData, 'nigerian');
+    }
+});
+ 
+
+// Load notebook data from Firestore
+async function loadNotebookData(notebookId) {
+    const doc = await db.collection('notebooks').doc(notebookId).get();
+    return { id: doc.id, ...doc.data() };
+}
+
+// Format-specific editor initialization
+function initializePDFFormat(notebook) {
+    const pdfFormat = document.getElementById('pdf-format');
+    const editorDropdown = document.querySelector('.editor-dropdown');
+    const pageCount = notebook.pageCount;
+    let currentPage = 1;
+    let pageContents = new Map(); // Store page contents
+
+    // Show floating editor only for PDF format
+    editorDropdown.style.display = 'block';
+
+    // Initialize editor tools
+    initializeEditorTools();
+
+    // Set up navigation with content preservation
+    const prevButton = pdfFormat.querySelector('button:first-of-type');
+    const nextButton = pdfFormat.querySelector('button:last-of-type');
+    const pageSpan = pdfFormat.querySelector('span');
+    const textarea = pdfFormat.querySelector('textarea');
+
+    function updatePageDisplay() {
+        pageSpan.textContent = `Page ${currentPage} of ${pageCount}`;
+    }
+
+    // Save current page content before navigation
+    function saveCurrentPage() {
+        pageContents.set(currentPage, textarea.value);
+    }
+
+    // Load saved page content
+    function loadSavedPage() {
+        textarea.value = pageContents.get(currentPage) || '';
+    }
+
+    prevButton.onclick = () => {
+        if (currentPage > 1) {
+            saveCurrentPage();
+            currentPage--;
+            updatePageDisplay();
+            loadSavedPage();
+            loadPageContent(notebook.id, currentPage);
+        }
+    };
+
+    nextButton.onclick = () => {
+        if (currentPage < pageCount) {
+            saveCurrentPage();
+            currentPage++;
+            updatePageDisplay();
+            loadSavedPage();
+            loadPageContent(notebook.id, currentPage);
+        }
+    };
+
+    updatePageDisplay();
+    loadPageContent(notebook.id, currentPage);
+}
+
+
+    // Modify the initializePDFFormat and initializeNigerianFormat functions to include proper page content management
+
+function initializeFormat(notebook, formatType) {
+    const format = document.getElementById(`${formatType}-format`);
+    const pageCount = notebook.pageCount;
+    let currentPage = 1;
+
+    // Initialize page navigation
+    const prevButton = format.querySelector('button:first-of-type');
+    const nextButton = format.querySelector('button:last-of-type');
+    const pageSpan = format.querySelector('span');
+    const textarea = format.querySelector('textarea') || format.querySelector('.notebook-text');
+
+    // Update page display
+    function updatePageDisplay() {
+        pageSpan.textContent = `Page ${currentPage} of ${pageCount}`;
+    }
+
+    // Save page content to Firestore
+    async function savePageContent() {
+        try {
+            await db.collection('notebooks')
+                .doc(notebook.id)
+                .collection('pages')
+                .doc(currentPage.toString())
+                .set({
+                    content: textarea.value,
+                    lastModified: firebase.firestore.FieldValue.serverTimestamp()
+                });
+        } catch (error) {
+            console.error('Error saving page content:', error);
+        }
+    }
+
+    // Load page content from Firestore
+    async function loadPageContent() {
+        try {
+            const pageDoc = await db.collection('notebooks')
+                .doc(notebook.id)
+                .collection('pages')
+                .doc(currentPage.toString())
+                .get();
+
+            textarea.value = pageDoc.exists ? pageDoc.data().content : '';
+        } catch (error) {
+            console.error('Error loading page content:', error);
+        }
+    }
+
+    // Navigation handlers with content saving
+    prevButton.onclick = async () => {
+        if (currentPage > 1) {
+            await savePageContent(); // Save current page before navigation
+            currentPage--;
+            updatePageDisplay();
+            await loadPageContent();
+        }
+    };
+
+    nextButton.onclick = async () => {
+        if (currentPage < pageCount) {
+            await savePageContent(); // Save current page before navigation
+            currentPage++;
+            updatePageDisplay();
+            await loadPageContent();
+        }
+    };
+
+    // Initialize autosave
+    const autosaveCheckbox = document.querySelector('.book-menu input[type="checkbox"]');
+    let autosaveInterval;
+
+    autosaveCheckbox.onchange = () => {
+        if (autosaveCheckbox.checked) {
+            autosaveInterval = setInterval(savePageContent, 30000); // Autosave every 30 seconds
+        } else {
+            clearInterval(autosaveInterval);
+        }
+    };
+
+    // Save on content change (debounced)
+    textarea.oninput = debounce(() => {
+        if (autosaveCheckbox.checked) {
+            savePageContent();
+        }
+    }, 1000);
+
+    // Initial setup
+    updatePageDisplay();
+    loadPageContent();
+}
+
+function initializeNigerianTools() {
+    const tools = document.querySelectorAll('.holes .editor-tool');
+    const writingArea = document.querySelector('.nigerian-page .writing-area');
+
+    tools.forEach(tool => {
+        tool.addEventListener('click', () => {
+            const command = getCommandFromTool(tool);
+            executeCommand(command, writingArea);
+        });
+    });
+}
+
+function getCommandFromTool(tool) {
+    const title = tool.getAttribute('title');
+    switch (title) {
+        case 'Font Size':
+            return { command: 'fontSize', value: prompt('Enter font size (1-7):', '3') };
+        case 'Bold':
+            return { command: 'bold' };
+        case 'Underline':
+            return { command: 'underline' };
+        case 'Text Style':
+            return { command: 'fontName', value: prompt('Enter font name:', 'Arial') };
+        case 'Add Table':
+            return { command: 'insertTable' };
+        case 'Undo':
+            return { command: 'undo' };
+        case 'Redo':
+            return { command: 'redo' };
+        case 'Add Image':
+            return { command: 'insertImage' };
+        case 'List':
+            return { command: 'insertUnorderedList' };
+        case 'Link':
+            return { command: 'createLink', value: prompt('Enter URL:', 'http://') };
+        case 'Code':
+            return { command: 'formatBlock', value: 'pre' };
+        default:
+            return null;
+    }
+}
+
+function executeCommand(commandObj, target) {
+    if (!commandObj) return;
+
+    if (commandObj.command === 'insertTable') {
+        const rows = prompt('Enter number of rows:', '3');
+        const cols = prompt('Enter number of columns:', '3');
+        insertTable(target, rows, cols);
+        return;
+    }
+
+    if (commandObj.command === 'insertImage') {
+        const input = document.createElement('input');
+        input.type = 'file';
+        input.accept = 'image/*';
+        input.onchange = (e) => handleImageUpload(e, target);
+        input.click();
+        return;
+    }
+
+    document.execCommand(commandObj.command, false, commandObj.value);
+}
+
+function insertTable(target, rows, cols) {
+    const table = document.createElement('table');
+    table.border = '1';
+
+    for (let i = 0; i < rows; i++) {
+        const row = table.insertRow();
+        for (let j = 0; j < cols; j++) {
+            const cell = row.insertCell();
+            cell.contentEditable = true;
+            cell.textContent = `Cell ${i}-${j}`;
+        }
+    }
+
+    target.appendChild(table);
+}
+
+async function handleImageUpload(event, target) {
+    const file = event.target.files[0];
+    if (file) {
+        const reader = new FileReader();
+        reader.onload = (e) => {
+            const img = document.createElement('img');
+            img.src = e.target.result;
+            img.style.maxWidth = '100%';
+            target.appendChild(img);
+        };
+        reader.readAsDataURL(file);
+    }
+}
+
+// Debounce helper function
+function debounce(func, wait) {
+    let timeout;
+    return function executedFunction(...args) {
+        const later = () => {
+            clearTimeout(timeout);
+            func(...args);
+        };
+        clearTimeout(timeout);
+        timeout = setTimeout(later, wait);
+    };
+}
+// Back button handlers
+document.getElementById('back-to-books').addEventListener('click', () => {
+    // Hide book content and show books page
+    document.getElementById('book-content').style.display = 'none';
+    document.getElementById('books-page').style.display = 'block';
+    
+    // Clear any active editor state
+    const editorDropdown = document.querySelector('.editor-dropdown');
+    if (editorDropdown) {
+        editorDropdown.style.display = 'none';
+    }
+    
+    // Reset formats display
+    const pdfFormat = document.getElementById('pdf-format');
+    const nigerianFormat = document.getElementById('nigerian-format');
+    if (pdfFormat) pdfFormat.style.display = 'none';
+    if (nigerianFormat) nigerianFormat.style.display = 'none';
+    
+    // Clear any autosave intervals
+    const autosaveCheckbox = document.querySelector('.book-menu input[type="checkbox"]');
+    if (autosaveCheckbox) {
+        autosaveCheckbox.checked = false;
+        autosaveCheckbox.dispatchEvent(new Event('change'));
+    }
+});
+
+document.getElementById('back-to-main').addEventListener('click', () => {
+    // Hide books page content
+    document.getElementById('booksContent').style.display = 'none';
+    
+    // Reset any active states in the books section
+    document.getElementById('books-page').style.display = 'block';
+    document.getElementById('book-content').style.display = 'none';
+    
+    // Clear search input
+    const searchInput = document.querySelector('.search-section input');
+    if (searchInput) {
+        searchInput.value = '';
+    }
+});
+
+// Global Stats Tracking System
+function initializeGlobalStats() {
+    const statsTable = document.querySelector('article table');
+    const [booksCell, usersCell, feedbackCell] = statsTable.querySelectorAll('td');
+
+    // Track Total Books Across All Users
+    db.collection('notebooks')
+        .where('createdAt', '!=', null) // Count all valid notebooks
+        .onSnapshot(snapshot => {
+            const totalBooks = snapshot.size;
+            booksCell.textContent = totalBooks;
+            // Add animation for number changes
+            booksCell.classList.add('number-change');
+            setTimeout(() => booksCell.classList.remove('number-change'), 500);
+        });
+
+    // Track Total Registered Users
+    db.collection('users')
+        .onSnapshot(snapshot => {
+            const totalUsers = snapshot.size;
+            usersCell.textContent = totalUsers;
+            usersCell.classList.add('number-change');
+            setTimeout(() => usersCell.classList.remove('number-change'), 500);
+        });
+
+    // Track Total User Feedback
+    db.collection('feedback')
+        .onSnapshot(snapshot => {
+            const totalFeedback = snapshot.size;
+            feedbackCell.textContent = totalFeedback;
+            feedbackCell.classList.add('number-change');
+            setTimeout(() => feedbackCell.classList.remove('number-change'), 500);
+        });
+}
+
+// Add this CSS for number change animation
+const style = document.createElement('style');
+style.textContent = `
+    .number-change {
+        animation: numberPulse 0.5s ease-out;
+    }
+    
+    @keyframes numberPulse {
+        0% { transform: scale(1); }
+        50% { transform: scale(1.2); }
+        100% { transform: scale(1); }
+    }
+`;
+document.head.appendChild(style);
+
+// Initialize stats when app loads
+document.addEventListener('DOMContentLoaded', initializeGlobalStats);
+// Feedback System Implementation
+class FeedbackSystem {
+    constructor() {
+        this.modal = document.getElementById('feedbackModal');
+        this.form = document.getElementById('feedbackForm');
+        this.trigger = document.getElementById('feedbackBtn');
+        this.stars = document.querySelectorAll('.stars i');
+        this.currentRating = 0;
+        
+        this.initializeEventListeners();
+    }
+
+    initializeEventListeners() {
+        // Open modal
+        this.trigger.addEventListener('click', () => this.openModal());
+
+        // Close modal
+        document.querySelector('.close-btn').addEventListener('click', () => this.closeModal());
+
+        // Star rating
+        this.stars.forEach(star => {
+            star.addEventListener('mouseover', () => this.highlightStars(star.dataset.rating));
+            star.addEventListener('mouseleave', () => this.highlightStars(this.currentRating));
+            star.addEventListener('click', () => this.setRating(star.dataset.rating));
+        });
+
+        // Form submission
+        this.form.addEventListener('submit', (e) => this.handleSubmit(e));
+    }
+
+    openModal() {
+        this.modal.style.display = 'block';
+    }
+
+    closeModal() {
+        this.modal.style.display = 'none';
+        this.resetForm();
+    }
+
+    highlightStars(rating) {
+        this.stars.forEach(star => {
+            star.classList.toggle('active', star.dataset.rating <= rating);
+        });
+    }
+
+    setRating(rating) {
+        this.currentRating = rating;
+        this.highlightStars(rating);
+    }
+
+    resetForm() {
+        this.form.reset();
+        this.currentRating = 0;
+        this.highlightStars(0);
+    }
+
+    async handleSubmit(e) {
+        e.preventDefault();
+
+        if (!auth.currentUser) {
+            alert('Please login to submit feedback');
+            return;
+        }
+
+        const feedbackData = {
+            userId: auth.currentUser.uid,
+            userEmail: auth.currentUser.email,
+            rating: this.currentRating,
+            type: this.form.querySelector('select').value,
+            message: this.form.querySelector('textarea').value,
+            timestamp: firebase.firestore.FieldValue.serverTimestamp()
+        };
+
+        try {
+            await db.collection('feedback').add(feedbackData);
+            this.showSuccessMessage();
+            this.closeModal();
+        } catch (error) {
+            this.showErrorMessage(error);
+        }
+    }
+
+    showSuccessMessage() {
+        const notification = document.createElement('div');
+        notification.className = 'feedback-notification success';
+        notification.textContent = 'Thank you for your feedback!';
+        document.body.appendChild(notification);
+        
+        setTimeout(() => notification.remove(), 3000);
+    }
+
+    showErrorMessage(error) {
+        const notification = document.createElement('div');
+        notification.className = 'feedback-notification error';
+        notification.textContent = `Error: ${error.message}`;
+        document.body.appendChild(notification);
+        
+        setTimeout(() => notification.remove(), 3000);
+    }
+}
+
+// Initialize feedback system
+document.addEventListener('DOMContentLoaded', () => {
+    const feedbackSystem = new FeedbackSystem();
+});
+
+
+
+
+// Notification System
+function showNotification(message, type = 'success') {
+    const notification = document.createElement('div');
+    notification.className = `notification ${type}`;
+    notification.textContent = message;
+    document.body.appendChild(notification);
+
+    setTimeout(() => {
+        notification.remove();
+    }, 3000);
+}
+
+// Initialize UI
+function initializeUI() {
+    // Set initial states
+    gradientControls.style.display = 'none';
+    bookContent.style.display = 'none';
+    booksPage.style.display = 'block';
+}
+
+
+    </script>    
+</body>
+</html>
