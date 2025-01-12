@@ -1255,259 +1255,138 @@ details button:hover {
     color: #999;
     font-style: italic;
 }
+/* Base responsive styles */
+:root {
+    --mobile-breakpoint: 480px;
+    --tablet-breakpoint: 768px;
+    --laptop-breakpoint: 1024px;
+    --desktop-breakpoint: 1200px;
+}
 
+/* Mobile First Approach */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-/* Responsive Design */
-@media (max-width: 768px) {
-    header {
-        padding: 10px 15px;
+/* Responsive Typography */
+html {
+    font-size: 16px;
+}
+
+@media (max-width: 480px) {
+    html {
+        font-size: 14px;
     }
+}
+
+/* Responsive Container */
+.auth-container {
+    width: 90%;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 1.5rem;
+}
+
+/* Responsive Form Elements */
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: clamp(0.5rem, 2vw, 0.8rem);
+    font-size: clamp(14px, 2vw, 16px);
+}
+
+/* Responsive Images */
+.logo {
+    width: clamp(80px, 15vw, 120px);
+    height: auto;
+}
+
+/* Responsive Grid System */
+.book-row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(250px, 100%), 1fr));
+    gap: clamp(1rem, 2vw, 2rem);
+}
+
+/* Responsive Navigation */
 nav {
-        flex-direction: column;
-    }
-
-   
-
-    nav button {
-        flex: 1;
-        min-width: 120px;
-    }
-
-    details > div {
-        width: 200px;
-    }
-
-    marquee {
-        width: 100% !important;
-    }
-    .book-menu {
-        flex-wrap: wrap;
-    }
-
-    .book-menu button {
-        flex: 1;
-    }
-
-    .search-section input {
-        font-size: 14px;
-    }
+    padding: clamp(0.5rem, 2vw, 1rem);
+    gap: clamp(0.5rem, 2vw, 1rem);
 }
 
+/* Device-specific adjustments */
 @media (max-width: 480px) {
-    main {
-        padding: 10px;
+    .auth-section {
+        padding: 1rem;
     }
-
-    footer nav {
-        flex-direction: column;
+    
+    .create-content {
+        width: 95%;
+        padding: 1rem;
     }
-
-    table {
-        font-size: 14px;
-    }
-    .hidden {
-    display: none !important;
-}
-}
-  /* Responsive Breakpoints */
-@media (max-width: 1200px) {
-    .main-app {
-        padding: 15px;
+    
+    .partnership-logo {
+        min-width: 80px;
+        height: 40px;
     }
 }
 
-@media (max-width: 992px) {
-    .book-row {
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+@media (min-width: 481px) and (max-width: 768px) {
+    .auth-section {
+        padding: 1.5rem;
+    }
+    
+    .create-content {
+        width: 90%;
+        padding: 1.5rem;
     }
 }
 
-@media (max-width: 768px) {
-    .nigerian-page {
-        flex-direction: column;
+@media (min-width: 769px) and (max-width: 1024px) {
+    .auth-section {
+        padding: 2rem;
     }
-
-    .create-content,
-    .books-content {
-        width: 100%;
-        height: 100vh;
-        overflow-y: auto;
+    
+    .create-content {
+        width: 80%;
+        max-width: 700px;
     }
 }
 
-@media (max-width: 480px) {
-    .main-app {
-        padding: 10px;
-    }
-
-    header {
-        flex-direction: column;
-        gap: 10px;
-    }
+/* Responsive Flexbox Layouts */
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: clamp(1rem, 2vw, 2rem);
 }
 
-
-/* Extra Small Devices (Phones, 320px and up) */
-@media only screen and (min-width: 320px) {
-    .main-app {
-        padding: var(--mobile-padding);
-    }
-
-    .grid-layout {
-        grid-template-columns: 1fr;
-        gap: 15px;
-    }
-
-    .header {
-        padding: 10px;
-    }
-}
-
-/* Small Devices (Large Phones, 480px and up) */
-@media only screen and (min-width: 480px) {
-    .grid-layout {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .card {
-        padding: 15px;
-    }
-}
-
-/* Medium Devices (Tablets, 768px and up) */
-@media only screen and (min-width: 768px) {
-    .main-app {
-        padding: var(--tablet-padding);
-    }
-
-    .grid-layout {
-        grid-template-columns: repeat(3, 1fr);
-        gap: 20px;
-    }
-
-    .header {
-        padding: 15px 20px;
-    }
-}
-
-/* Large Devices (Laptops/Desktops, 992px and up) */
-@media only screen and (min-width: 992px) {
-    .main-app {
-        padding: var(--desktop-padding);
-    }
-
-    .grid-layout {
-        grid-template-columns: repeat(4, 1fr);
-        gap: 25px;
-    }
-}
-
-/* Extra Large Devices (Large Laptops and Desktops, 1200px and up) */
-@media only screen and (min-width: 1200px) {
-    .grid-layout {
-        grid-template-columns: repeat(5, 1fr);
-        gap: 30px;
-    }
-}
-
-/* Device-Specific Optimizations */
-
-/* iPads and Tablets */
-@media only screen and (min-width: 768px) and (max-width: 991px) {
-    .pdf-grid {
-        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    }
-}
-
-/* Portrait Phones */
-@media only screen and (max-width: 480px) {
-    .header {
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    .search-box input {
-        width: 100%;
-    }
-
-    .button-group {
-        flex-direction: column;
-        width: 100%;
-    }
-}
-
-/* Landscape Phones */
-@media only screen and (max-width: 767px) and (orientation: landscape) {
-    .modal-content {
-        max-height: 80vh;
-        overflow-y: auto;
-    }
-}
-
-/* Touch Device Optimizations */
+/* Touch-friendly elements for mobile */
 @media (hover: none) {
-    .button:hover {
-        transform: none;
-    }
-
-    .card:hover {
-        transform: none;
+    .button,
+    .nav-link {
+        padding: 12px 20px;
+        min-height: 44px;
     }
 }
 
-/* High-DPI Screen Optimizations */
+/* High-resolution screens */
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
-    .image {
-        background-size: contain;
+    .logo {
+        image-rendering: -webkit-optimize-contrast;
     }
 }
 
-/* Print Media */
-@media print {
-    .no-print {
-        display: none;
-    }
-
-    .page-break {
-        page-break-before: always;
+/* Orientation changes */
+@media (orientation: landscape) and (max-height: 500px) {
+    .auth-section {
+        min-height: auto;
+        padding: 1rem;
     }
 }
 
-/* Accessibility */
-@media (prefers-reduced-motion: reduce) {
-    * {
-        animation: none !important;
-        transition: none !important;
-    }
-}
-
-/* Dark Mode Support */
-@media (prefers-color-scheme: dark) {
-    :root {
-        --background-color: #121212;
-        --text-color: #ffffff;
-    }
-}
-
-/* Foldable Device Support */
-@media (spanning: single-fold-vertical) {
-    .content {
-        flex-direction: row;
-    }
-}
-
-/* CSS Grid Fallbacks */
-@supports not (display: grid) {
-    .grid-layout {
-        display: flex;
-        flex-wrap: wrap;
-    }
-
-    .grid-item {
-        flex: 1 1 300px;
-        margin: 10px;
-    }
-}
 
     </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
