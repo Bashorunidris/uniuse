@@ -139,12 +139,6 @@ body {
 }
  /* Base Styles */
 :root {
-    --primary-color: #007bff;
-    --secondary-color: #28a745;
-    --background-color: #f8f9fa;
-    --text-color: #212529;
-    --border-color: #ddd;
-    --shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 * {
@@ -241,31 +235,57 @@ marquee video {
     margin: 0 10px;
     border-radius: 4px;
 }
-
-/* Stats Board */
-.stats-board {
-    background: white;
+.stats-section {
+    max-width: 800px;
+    margin: 40px auto;
     padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    margin: 20px 0;
 }
 
-table {
+.stats-article {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    padding: 25px;
+}
+
+.stats-heading {
+    color: #2c3e50;
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.stats-table {
     width: 100%;
     border-collapse: collapse;
-    margin: 15px 0;
+    margin-top: 15px;
+    background: #fff;
 }
 
-th, td {
-    padding: 12px;
+.stats-table th {
+    background: #4a90e2;
+    color: white;
+    padding: 15px;
+    font-weight: 600;
+}
+
+.stats-table td {
+    padding: 15px;
     text-align: center;
-    border: 1px solid #ddd;
+    color: #2c3e50;
+    font-size: 18px;
 }
 
-th {
-    background: #f8f9fa;
+.stats-table th, 
+.stats-table td {
+    border: 1px solid #e0e0e0;
 }
+
+.stats-table tr:hover td {
+    background: #f5f8ff;
+    transition: background 0.3s ease;
+}
+
 nav {
     padding: 1rem;
     background: white;
@@ -1587,6 +1607,70 @@ input[type="text"]::placeholder {
     color: #999;
     font-style: italic;
 }
+.coming-soon-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 10vh;
+    background: linear-gradient(45deg, #2c3e50, #3498db);
+    border-radius: 5px;
+}
+
+.coming-soon-container .coming-soon-title {
+    color: white;
+    font-size: 0.7rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    animation: coming-soon-pulse 2s infinite;
+}
+
+.coming-soon-container .coming-soon-subtitle {
+    color: white;
+    font-size: 0.3rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    animation: coming-soon-pulse 2s infinite;
+}
+
+.coming-soon-container .loading-dots {
+    display: flex;
+    gap: 8px;
+    margin-top: -20px;
+}
+
+.coming-soon-container .loading-dots span {
+    width: 2px;
+    height: 2px;
+    background-color: white;
+    border-radius: 50%;
+    animation: coming-soon-bounce 1.4s infinite ease-in-out;
+}
+
+.coming-soon-container .loading-dots span:nth-child(1) {
+    animation-delay: -0.32s;
+}
+
+.coming-soon-container .loading-dots span:nth-child(2) {
+    animation-delay: -0.16s;
+}
+
+@keyframes coming-soon-pulse {
+    0% { opacity: 1; }
+    50% { opacity: 0.5; }
+    100% { opacity: 1; }
+}
+
+@keyframes coming-soon-bounce {
+    0%, 80%, 100% { 
+        transform: scale(0);
+    }
+    40% { 
+        transform: scale(1);
+    }
+}
+
+
 /* Base responsive styles */
 :root {
     --mobile-breakpoint: 480px;
@@ -2034,9 +2118,9 @@ footer > p {
                 </div>
             </details>
         </header>
-
-        <!-- Menu Bar -->
+ <!-- Menu Bar -->
         <nav>
+            
             <div class="create-dropdown">
                 <button class="create-trigger">Create</button>
                 <div class="create-content" id="createContent">
@@ -2094,6 +2178,8 @@ footer > p {
                     </div>
                 </div>
             </div>
+           
+        
             <div class="books-dropdown">
     <button class="books-trigger">Books</button>
     <div class="books-content" id="booksContent">
@@ -2114,7 +2200,7 @@ footer > p {
 
             <!-- Ad Banner -->
             <div class="ad-banner">
-                <marquee width="480" height="60">
+                <marquee width="380" height="90">
                     <img src="ad1.jpg" alt="Advertisement" width="480" height="60">
                     <img src="ad2.jpg" alt="Advertisement" width="480" height="60">
                 </marquee>
@@ -2453,6 +2539,17 @@ footer > p {
                 <div class="nigerian-page">
                     <!-- Left side holes with editor tools -->
                    <div class="holes">
+                    <div class="coming-soon-container">
+                        <h1 class="coming-soon-title">Coming Soon</h1>
+                        <h2 class="coming-soon-subtitle">Editor Tools</h2>
+                        <div class="loading-dots">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                    </div>
+                    
+                    
     <div class="editor-tool" title="Font Size">
         <i class="fas fa-text-height"></i>
     </div>
@@ -2526,6 +2623,7 @@ footer > p {
             </div>
         </section>
     </div>
+    
 </div>
 
 
@@ -2566,30 +2664,20 @@ footer > p {
     </div>
 </div>
 
+<!-- Ad Banner -->
+<div class="ad-banner">
+    <marquee width="380" height="60">
+        <img src="ad1.jpg" alt="Advertisement" width="480" height="60">
+        <img src="ad2.jpg" alt="Advertisement" width="480" height="60">
+    </marquee>
+</div>
+        
+        
 
-        <!-- Main Ad Banner -->
-        <section>
-            <marquee scrolldelay="15000" width="500" height="70">
-                <img src="ad1.jpg" alt="Advertise With use " width="500" height="70">
-                <img src="ad2.jpg" alt="Advertise With use " width="500" height="70">
-                <img src="ad3.jpg" alt="Advertise With use " width="500" height="70">
-                <video width="500" height="70" autoplay muted>
-                    <source src="ad-video1.mp4" type="video/mp4">
-                </video>
-                <img src="ad4.jpg" alt="Advertisement 4" width="500" height="70">
-                <img src="ad5.jpg" alt="Advertisement 5" width="500" height="70">
-                <img src="ad6.jpg" alt="Advertisement 6" width="500" height="70">
-                <video width="500" height="70" autoplay muted>
-                    <source src="ad-video2.mp4" type="video/mp4">
-                </video>
-            </marquee>
-        </section>
-
-        <!-- Stats Board -->
-        <section>
-            <article>
-                <h2>App Statistics</h2>
-                <table border="1">
+        <section class="stats-section">
+            <article class="stats-article">
+                <h2 class="stats-heading">App Statistics</h2>
+                <table class="stats-table" border="1">
                     <tr>
                         <th>Books Created</th>
                         <th>Total Users</th>
@@ -2603,10 +2691,10 @@ footer > p {
                 </table>
             </article>
         </section>
-
+        
         <!-- Small Ad Banner -->
         <section>
-            <marquee width="250" height="40">
+            <marquee width="250" height="90">
                 <img src="small-ad1.jpg" alt="Small Advertisement" width="250" height="40">
                 <img src="small-ad2.jpg" alt="Small Advertisement" width="250" height="40">
             </marquee>
