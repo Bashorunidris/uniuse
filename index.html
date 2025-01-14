@@ -1784,6 +1784,369 @@ input[type="text"]::placeholder {
     transform: translateY(2px);
 }
 
+/* Root Variables */
+:root {
+    --surface: #ffffff;
+    --text: #1e293b;
+    --text-light: #64748b;
+    --primary: #2563eb;
+    --border: #e2e8f0;
+    --hover: #f1f5f9;
+    --shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    --radius: 12px;
+    --transition: all 0.3s ease;
+}
+
+/* Sliding Menu */
+.app-menu {
+    position: fixed;
+    top: 0;
+    left: -300px;
+    width: 300px;
+    height: 100vh;
+    background: var(--surface);
+    box-shadow: var(--shadow);
+    transition: transform 0.3s ease;
+    z-index: 1000;
+}
+
+.app-menu.active {
+    transform: translateX(300px);
+}
+
+/* Menu Structure */
+.menu-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    border-bottom: 1px solid var(--border);
+}
+
+.menu-content {
+    padding: 1rem;
+    overflow-y: auto;
+    height: calc(100vh - 60px);
+}
+
+.menu-section {
+    margin-bottom: 2rem;
+}
+
+.menu-section h4 {
+    color: var(--text-light);
+    margin-bottom: 1rem;
+    padding-left: 0.5rem;
+}
+
+/* Menu Items */
+.menu-items {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 16px;
+}
+
+.menu-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 14px;
+    background: var(--hover);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    cursor: pointer;
+    transition: var(--transition);
+    width: 100%;
+}
+
+.menu-item i {
+    width: 24px;
+    text-align: center;
+    font-size: 1.1rem;
+}
+
+.menu-item:hover {
+    background: var(--hover);
+    color: var(--primary);
+    transform: translateY(-2px);
+}
+
+/* Feature-specific colors */
+.menu-item[data-feature="share"] i { color: #22c55e; }
+.menu-item[data-feature="chat"] i { color: #ef4444; }
+.menu-item[data-feature="passshare"] i { color: #3b82f6; }
+.menu-item[data-feature="usebox"] i { color: #f59e0b; }
+.menu-item[data-feature="library"] i { color: #8b5cf6; }
+.menu-item[data-feature="podcast"] i { color: #ec4899; }
+.menu-item[data-feature="channels"] i { color: #06b6d4; }
+
+/* Overlay Styles */
+.menu-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    opacity: 0;
+    transition: var(--transition);
+}
+
+.menu-overlay.active {
+    display: flex;
+    opacity: 1;
+}
+
+/* Popup Styles */
+.menu-popup {
+    background: var(--surface);
+    border-radius: 20px;
+    padding: 24px;
+    width: 90%;
+    max-width: 600px;
+    transform: translateY(20px);
+    transition: var(--transition);
+    box-shadow: var(--shadow);
+}
+
+.menu-overlay.active .menu-popup {
+    transform: translateY(0);
+}
+
+/* Close Button */
+.close-menu {
+    width: 36px;
+    height: 36px;
+    border: none;
+    background: var(--hover);
+    border-radius: 10px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--transition);
+}
+
+.close-menu i {
+    color: var(--text-light);
+    font-size: 18px;
+}
+
+.close-menu:hover {
+    background: var(--border);
+    transform: rotate(90deg);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .menu-popup {
+        padding: 20px;
+    }
+
+    .menu-items {
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+        gap: 12px;
+    }
+
+    .menu-item {
+        padding: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .menu-items {
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+        gap: 8px;
+    }
+
+    .menu-item {
+        padding: 10px;
+        font-size: 12px;
+    }
+}
+
+
+:root {
+    --picker-primary: #8b5cf6;
+    --picker-surface: #ffffff;
+    --picker-text: #1e293b;
+    --picker-border: #e2e8f0;
+    --picker-hover: #f1f5f9;
+    --picker-shadow: 0 10px 25px rgba(139, 92, 246, 0.1);
+}
+
+.picker-trigger {
+    background: #2c3e50;
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    border: none;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.picker-trigger i {
+    color: white;
+    font-size: 20px;
+}
+
+.picker-trigger:hover {
+    background: #34495e;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+.picker-trigger:active {
+    transform: translateY(2px);
+}
+.picker-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.picker-overlay.active {
+    display: flex;
+    opacity: 1;
+}
+
+.picker-popup {
+    background: var(--picker-surface);
+    border-radius: 24px;
+    padding: 24px;
+    width: 90%;
+    max-width: 600px;
+    transform: translateY(20px);
+    transition: all 0.3s ease;
+    box-shadow: var(--picker-shadow);
+}
+
+.picker-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+}
+
+.picker-header h4 {
+    color: var(--picker-text);
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.close-picker {
+    width: 40px;
+    height: 40px;
+    border: none;
+    background: var(--picker-hover);
+    border-radius: 12px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.picker-items {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 16px;
+}
+
+.picker-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 16px;
+    background: var(--picker-hover);
+    border: 1px solid var(--picker-border);
+    border-radius: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.picker-item i {
+    font-size: 20px;
+    color: var(--picker-primary);
+}
+
+/* Feature-specific colors */
+.picker-item[data-feature="save"] i { color: #22c55e; }
+.picker-item[data-feature="news"] i { color: #ef4444; }
+.picker-item[data-feature="search"] i { color: #3b82f6; }
+.picker-item[data-feature="budget"] i { color: #f59e0b; }
+.picker-item[data-feature="store"] i { color: #8b5cf6; }
+.picker-item[data-feature="music"] i { color: #ec4899; }
+.picker-item[data-feature="health"] i { color: #06b6d4; }
+.picker-item[data-feature="discount"] i { color: #10b981; }
+.picker-item[data-feature="gift"] i { color: #f43f5e; }
+
+.picker-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    background: white;
+}
+
+@media (max-width: 768px) {
+    .picker-items {
+        grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+        gap: 12px;
+    }
+    
+    .picker-item {
+        padding: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .picker-items {
+        grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+        gap: 8px;
+    }
+}
+
+
+.pdf-trigger {
+    background: #2c3e50;
+    border-radius: 10px;
+    width: 100px;
+    height: 45px;
+    border: none;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pdf-trigger i {
+    color: white;
+    font-size: 20px;
+}
+
+.pdf-trigger:hover {
+    background: #34495e;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+.pdf-trigger:active {
+    transform: translateY(2px);
+}
 .coming-soon-container .loading-dots span {
     width: 2px;
     height: 2px;
@@ -2324,6 +2687,9 @@ footer > p {
                 </div>
             </div>
            
+<button class="pdf-trigger" id="pdfTrigger">
+    <i class="fas fa-Pdf">PDF</i>
+</button>
         
             <div class="books-dropdown">
     <button class="books-trigger"><i class="fas fa-plus-book">Books</i> </button>
@@ -2820,7 +3186,126 @@ footer > p {
 <button class="menu-trigger" id="menuTrigger">
     <i class="fas fa-bars"></i>
 </button>
+ 
+<button class="picker-trigger" id="pickerTrigger">
+    <i class="fas fa-cross"></i>
+</button>
+
+
+   
+<div class="menu-overlay" id="menuOverlay">
+    <div class="menu-popup">
+        <div class="menu-header">
+            <h4>Main Features</h4>
+            <button class="close-menu" id="closeMenu">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
         
+        <div class="menu-items">
+            <button class="menu-item" data-feature="share">
+                <i class="fas fa-share-alt"></i>
+                <span>Share</span>
+            </button>
+            
+            <button class="menu-item" data-feature="passshare">
+                <i class="fas fa-key"></i>
+                <span>Pass Share</span>
+            </button>
+
+            <button class="menu-item" data-feature="usebox">
+                <i class="fas fa-inbox"></i>
+                <span>UseBox</span>
+                <span class="notification-badge">0</span>
+            </button>
+
+            <button class="menu-item" data-feature="library">
+                <i class="fas fa-book"></i>
+                <span>E-Library</span>
+            </button>
+
+            <button class="menu-item" data-feature="tutorial">
+                <i class="fas fa-chalkboard-teacher"></i>
+                <span>Tutorial</span>
+            </button>
+
+            <button class="menu-item" data-feature="podcast">
+                <i class="fas fa-microphone"></i>
+                <span>Podcast</span>
+            </button>
+
+            <button class="menu-item" data-feature="chat">
+                <i class="fas fa-comments"></i>
+                <span>Chaty</span>
+                <span class="notification-badge">3</span>
+            </button>
+
+            <button class="menu-item" data-feature="channels">
+                <i class="fas fa-tv"></i>
+                <span>Channels</span>
+            </button>
+        </div>
+    </div>
+</div>
+
+
+<div class="picker-overlay" id="pickerOverlay">
+    <div class="picker-popup">
+        <div class="picker-header">
+            <h4>Quick Picks</h4>
+            <button class="close-picker" id="closePicker">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        
+        <div class="picker-items">
+            <button class="picker-item" data-feature="save">
+                <i class="fas fa-bookmark"></i>
+                <span>Save</span>
+            </button>
+            
+            <button class="picker-item" data-feature="news">
+                <i class="fas fa-newspaper"></i>
+                <span>News</span>
+            </button>
+
+            <button class="picker-item" data-feature="search">
+                <i class="fas fa-search"></i>
+                <span>Search/Find</span>
+            </button>
+
+            <button class="picker-item" data-feature="budget">
+                <i class="fas fa-calculator"></i>
+                <span>Budget Planner</span>
+            </button>
+
+            <button class="picker-item" data-feature="store">
+                <i class="fas fa-store"></i>
+                <span>THE Store</span>
+            </button>
+
+            <button class="picker-item" data-feature="music">
+                <i class="fas fa-music"></i>
+                <span>Music Player</span>
+            </button>
+
+            <button class="picker-item" data-feature="health">
+                <i class="fas fa-heartbeat"></i>
+                <span>Health</span>
+            </button>
+
+            <button class="picker-item" data-feature="discount">
+                <i class="fas fa-tags"></i>
+                <span>Student Discount</span>
+            </button>
+
+            <button class="picker-item" data-feature="gift">
+                <i class="fas fa-gift"></i>
+                <span>Gifting</span>
+            </button>
+        </div>
+    </div>
+</div>
 
         <section class="stats-section">
             <article class="stats-article">
@@ -3784,7 +4269,34 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
+document.getElementById('menuTrigger').addEventListener('click', () => {
+    document.getElementById('menuOverlay').classList.add('active');
+});
 
+document.getElementById('closeMenu').addEventListener('click', () => {
+    document.getElementById('menuOverlay').classList.remove('active');
+});
+
+// Close on overlay click
+document.getElementById('menuOverlay').addEventListener('click', (e) => {
+    if (e.target === document.getElementById('menuOverlay')) {
+        document.getElementById('menuOverlay').classList.remove('active');
+    }
+});
+
+document.getElementById('pickerTrigger').addEventListener('click', () => {
+    document.getElementById('pickerOverlay').classList.add('active');
+});
+
+document.getElementById('closePicker').addEventListener('click', () => {
+    document.getElementById('pickerOverlay').classList.remove('active');
+});
+
+document.getElementById('pickerOverlay').addEventListener('click', (e) => {
+    if (e.target === document.getElementById('pickerOverlay')) {
+        document.getElementById('pickerOverlay').classList.remove('active');
+    }
+});
 
 // Notification System
 function showNotification(message, type = 'success') {
