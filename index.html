@@ -223,18 +223,6 @@ header img {
     }
 }
 
-/* Ad Banners */
-marquee {
-    background: #f8f9fa;
-    border-radius: 8px;
-    margin: 20px 0;
-}
-
-marquee img,
-marquee video {
-    margin: 0 10px;
-    border-radius: 4px;
-}
 .stats-section {
     max-width: 800px;
     margin: 40px auto;
@@ -1610,6 +1598,134 @@ input[type="text"]::placeholder {
     color: #999;
     font-style: italic;
 }
+
+/* Base styles */
+.ad-banner {
+    width: 728px;
+    height: 250px;
+    position: relative;
+    overflow: hidden;
+    background: #ffffff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    margin: 20px auto;
+}
+
+.ad-banner marquee {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.ad-banner img {
+    width: 728px;
+    height: 250px;
+    object-fit: contain;
+    flex-shrink: 0;
+    margin-right: 728px;
+}
+
+/* Large Laptops and Desktops (1200px and up) */
+@media screen and (min-width: 1200px) {
+    .ad-banner {
+        width: 970px;
+        height: 300px;
+    }
+    
+    .ad-banner img {
+        width: 970px;
+        height: 300px;
+        margin-right: 970px;
+    }
+}
+
+/* Regular Laptops (992px to 1199px) */
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+    .ad-banner {
+        width: 728px;
+        height: 250px;
+    }
+    
+    .ad-banner img {
+        width: 728px;
+        height: 250px;
+        margin-right: 728px;
+    }
+}
+
+/* iPads and Tablets (768px to 991px) */
+@media screen and (min-width: 768px) and (max-width: 991px) {
+    .ad-banner {
+        width: 680px;
+        height: 220px;
+    }
+    
+    .ad-banner img {
+        width: 680px;
+        height: 220px;
+        margin-right: 680px;
+    }
+}
+
+/* Large Phones (576px to 767px) */
+@media screen and (min-width: 576px) and (max-width: 767px) {
+    .ad-banner {
+        width: 468px;
+        height: 180px;
+    }
+    
+    .ad-banner img {
+        width: 468px;
+        height: 180px;
+        margin-right: 468px;
+    }
+}
+
+/* iPhones and Small Phones (320px to 575px) */
+@media screen and (max-width: 575px) {
+    .ad-banner {
+        width: 320px;
+        height: 150px;
+    }
+    
+    .ad-banner img {
+        width: 320px;
+        height: 150px;
+        margin-right: 320px;
+    }
+}
+
+/* iPhone SE and Extra Small Devices */
+@media screen and (max-width: 320px) {
+    .ad-banner {
+        width: 280px;
+        height: 130px;
+    }
+    
+    .ad-banner img {
+        width: 280px;
+        height: 130px;
+        margin-right: 280px;
+    }
+}
+
+/* Device Orientation - Landscape Mode */
+@media screen and (orientation: landscape) and (max-height: 576px) {
+    .ad-banner {
+        width: 90vw;
+        height: 40vh;
+    }
+    
+    .ad-banner img {
+        width: 90vw;
+        height: 40vh;
+        margin-right: 90vw;
+    }
+}
+
+
+
 .coming-soon-container {
     display: flex;
     flex-direction: column;
@@ -2125,7 +2241,7 @@ footer > p {
         <nav>
             
             <div class="create-dropdown">
-                <button class="create-trigger">Create</button>
+                <button class="create-trigger"><i class="fas fa-plus-circle"></i> Create</button>
                 <div class="create-content" id="createContent">
                     <div class="create-form">
                         <form id="notebook-form">
@@ -2184,7 +2300,7 @@ footer > p {
            
         
             <div class="books-dropdown">
-    <button class="books-trigger">Books</button>
+    <button class="books-trigger"><i class="fas fa-plus-book">Books</i> </button>
     <div class="books-content" id="booksContent">
         <section id="books-page">
             <!-- Header -->
@@ -2669,9 +2785,9 @@ footer > p {
 
 <!-- Ad Banner -->
 <div class="ad-banner">
-    <marquee width="380" height="60">
-        <img src="ad1.jpg" alt="Advertisement" width="480" height="60">
-        <img src="ad2.jpg" alt="Advertisement" width="480" height="60">
+    <marquee width="380" height="110">
+        <img src="https://i.ibb.co/0Q3NMXm/F673-D55-B-42-C9-47-D4-B824-7-EEFBA5-BA874.jpg" alt="Advertisement" width="150" height="150">
+        <img src="https://i.ibb.co/zSfwTn3/EE0-B8383-357-B-4721-8648-21-F1007-CD0-F7.jpg" alt="Advertisement" width="480" height="60">
     </marquee>
 </div>
         
@@ -2695,13 +2811,14 @@ footer > p {
             </article>
         </section>
         
-        <!-- Small Ad Banner -->
-        <section>
-            <marquee width="250" height="90">
-                <img src="small-ad1.jpg" alt="Small Advertisement" width="250" height="40">
-                <img src="small-ad2.jpg" alt="Small Advertisement" width="250" height="40">
-            </marquee>
-        </section>
+        
+<!-- Ad Banner -->
+<div class="ad-banner">
+    <marquee width="380" height="110">
+        <img src="https://i.ibb.co/0Q3NMXm/F673-D55-B-42-C9-47-D4-B824-7-EEFBA5-BA874.jpg" alt="Advertisement" width="150" height="150">
+        <img src="https://i.ibb.co/zSfwTn3/EE0-B8383-357-B-4721-8648-21-F1007-CD0-F7.jpg" alt="Advertisement" width="480" height="60">
+    </marquee>
+</div>
 
         <!-- Footer -->
         <footer>
