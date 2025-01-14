@@ -1758,6 +1758,32 @@ input[type="text"]::placeholder {
     margin-top: -20px;
 }
 
+.menu-trigger {
+    background: #2c3e50;
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    border: none;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.menu-trigger i {
+    color: white;
+    font-size: 20px;
+}
+
+.menu-trigger:hover {
+    background: #34495e;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+.menu-trigger:active {
+    transform: translateY(2px);
+}
+
 .coming-soon-container .loading-dots span {
     width: 2px;
     height: 2px;
@@ -2790,7 +2816,10 @@ footer > p {
         <img src="https://i.ibb.co/zSfwTn3/EE0-B8383-357-B-4721-8648-21-F1007-CD0-F7.jpg" alt="Advertisement" width="480" height="60">
     </marquee>
 </div>
-        
+  
+<button class="menu-trigger" id="menuTrigger">
+    <i class="fas fa-bars"></i>
+</button>
         
 
         <section class="stats-section">
